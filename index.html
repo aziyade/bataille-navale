@@ -1,0 +1,54 @@
+<script>
+//debut
+
+
+tab1=new Array(1,2,3, 4);
+tab2=new Array(5,6,7, 8);
+tab3=new Array(9,10,11, 12);
+tab4=new Array(13,14,15, 16);
+
+tab=new Array(tab1,tab2,tab3, tab4);
+
+
+console.log(tab);
+
+
+function entierAleatoire(min, max)
+{
+ return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+//Utilisation
+//La variable contient un nombre aléatoire compris entre 1 et 100
+var boat = entierAleatoire(1, 16);
+
+var boat = boat;
+
+console.log(boat);
+//.........................................
+let jouer = true;
+let i =0;
+do
+{
+	i++;
+	let nb = prompt('Votre nombre ?');
+
+	if (nb != boat)
+	{
+		console.log('rejouer !');
+	}
+	else if (nb == boat)
+	{
+		console.log('touché !!!');
+		jouer = false;
+	}
+
+}while(jouer);
+console.log('touché :' + boat);
+
+
+
+
+
+//..........................................
+
+</script>
